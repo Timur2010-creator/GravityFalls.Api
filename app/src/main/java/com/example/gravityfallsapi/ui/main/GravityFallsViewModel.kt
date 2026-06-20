@@ -12,7 +12,7 @@ class GravityFallsViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 // Вызов функции с круглыми скобками
-                val response = RetrofitClient.apiService.getAllCharacters()
+                val response = RetrofitClient.api.getAllCharacters()
                 Log.d("API_SUCCESS", "Fetched ${response.size} characters")
             } catch (e: Exception) {
                 Log.e("API_ERROR", "Error fetching data: ${e.message}")
